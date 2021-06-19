@@ -1,2 +1,2 @@
-# Excercise-of-C
-In this repository, I'll start the excercise of c
+# Excercise of C/C++
+In this repository, I'll start the excercise of c/c++
