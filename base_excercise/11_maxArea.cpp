@@ -32,9 +32,9 @@ public:
 int main()
 {
     Solution solution;
-    int a[9] = [1,8,6,2,5,4,8,3,7];
+   vector<int> arr{1,8,6,2,5,4,8,3,7};
   
-    cout << solution.maxArea(a) << endl;
+    cout << solution.maxArea(arr) << endl;
     
     return;
 }
