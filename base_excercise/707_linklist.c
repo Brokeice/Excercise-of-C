@@ -8,6 +8,26 @@ struct node
     struct node *next;
 };
 
+int32_t list_init(struct node **node_list)
+{
+    struct node *cur = (struct node *)malloc(sizeof(struct node));
+
+    if (node_list == NULL)
+    {
+        printf("LINE: [%d] FUNC: [%s] pointer is null\r\n", __LINE__, __func__);
+        return 1;
+    }
+    cur->next = NULL;
+    cur->val = 0;
+    *node_list = cur;
+
+    // *node_list = (struct node *)malloc(sizeof(struct node));
+    // (*node_list)->val = 0;
+    // (*node_list)->next = NULL;
+    
+    return 0;
+}
+
 int32_t list_size_get(struct node *node_list, int32_t *size)
 {
     int16_t index = 0;
@@ -227,7 +247,8 @@ int32_t main()
     int32_t size = 0;
     int32_t node_value = 0;
 
-    mylist = (struct node*)malloc(sizeof(struct node));
+    // mylist = (struct node*)malloc(sizeof(struct node));
+    list_init(&mylist);
 
     add_tail(mylist, 1);
     add_tail(mylist, 1000);
